@@ -26,4 +26,6 @@ __definição 2:__ é o **modelo de domínio** em nível de **Análise:**
   Um atributo não pode ser multivalorado, tipo ter vários valores um memso atributo
   Um atributo não pode ser composto: ter várias informações que poderia ser separado em vários atributos colocando em apenas um.
 
+  __Caso de uso:__ documento estruturado que especifica uma funcionalidade do sistema por meio de troca de informações entre usuários e sistemas;
+
   
