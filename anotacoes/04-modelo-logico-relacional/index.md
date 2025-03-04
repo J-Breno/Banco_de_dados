@@ -21,3 +21,9 @@
 ## Integridade referencial
 - integridade referencial refere-se à consistência dos dados uma chave estrangeira.
 - Se há um valor em um chave estrangeira, então DEVE existir o valor correspondente na chave primária da tabela referenciada, ou seja, o valor que está na chave estrangeira, deve existir na chave primária
+
+## x para x
+
+- quando for muitos para um, coloque a chave estrangeira no muitos
+- quando for um para um, a cahve primária vai ser a própria chave estrangeira
+- quando for n para n, você deve fazer uma outra tabela para fazer as associações e a cahve primária vai ser os dois campo juntos
