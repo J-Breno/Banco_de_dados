@@ -13,3 +13,8 @@
 - Chave primária: é uma dentre as chaves candidatas, escolhida ara ser a maneira "padrão" de se identificar um registro na tabela
 - Chave alternativa: é o conjunto das chaves candidatas, menos a chave primária
 - OBS: Toda chave primária (PK) é uma chave candidata, mas nem toda chave candidata vira PK.
+
+## Chave estrangeira
+- Coluna(ou combinação de colunas) que corresponde à chave primária de "outra" tabela.
+- Serve para fazer relacionamentos, fazendo referência ao resgitro de "outra" tabela;
+
