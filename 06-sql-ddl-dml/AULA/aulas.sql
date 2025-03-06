@@ -24,3 +24,24 @@ CREATE TABLE tb_funcionario(
 );
 
 DROP TABLE tb_funcionario;
+
+ALTER TABLE tb_funcionario ADD data_nasc DATE;
+ALTER TABLE tb_funcionario ADD contact_email VARCHAR(10) NOT NULL;
+
+ALTER TABLE tb_funcionario DROP COLUMN data_nasc;
+
+ALTER TABLE tb_funcionario RENAME contact_email TO email;
+ALTER TABLE tb_funcionario ALTER email TYPE VARCHAR(20);
+
+CREATE TABLE table_example(
+	id INT,
+	name VARCHAR(40)
+);
+
+ALTER TABLE table_example ADD PRIMARY KEY(id);
+ALTER TABLE table_example DROP CONSTRAINT table_example_pkey; -- mesmo jeito para chave estrangeira
+
+DROP TABLE table_example;
+
+ALTER TABLE tb_funcionario DROP CONSTRAINT tb_funcionario_cod_cargo_fkey;
+ALTER TABLE tb_funcionario ADD FOREIGN KEY(cod_cargo) REFERENCES tb_cargo(id);
