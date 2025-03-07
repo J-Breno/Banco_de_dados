@@ -20,8 +20,8 @@ CREATE TABLE tb_funcionario(
 	cod_cargo INT NOT NULL,
 	cod_depto INT NOT NULL,
 	PRIMARY KEY(id),
-	FOREIGN KEY(cod_cargo) REFERENCES tb_cargo(id),
-	FOREIGN KEY(cod_depto) REFERENCES tb_departamento(id)
+	FOREIGN KEY(cod_cargo) REFERENCES tb_cargo(id) ON DELETE RESTRICT,
+	FOREIGN KEY(cod_depto) REFERENCES tb_departamento(id) ON DELETE RESTRICT
 );
 
 DROP TABLE tb_funcionario;
@@ -86,3 +86,6 @@ VALUES(10, 'João Marques', '2021-03-15', 'M', 3, 1);
 UPDATE tb_funcionario SET nome = 'Ricardo Fernandes Oliveira' WHERE id = 4;
 UPDATE tb_funcionario SET cod_cargo = 3 WHERE id = 3;
 
+DELETE FROM tb_funcionario WHERE id = 10;
+
+-- CASCADE deleta todos relacionados; RESTRICT não deleta se tiver mais de um
