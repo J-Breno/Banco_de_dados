@@ -125,3 +125,4 @@ INSERT INTO tb_locacao_diaria(id, dias_previstos) VALUES(2, 4);
 
 INSERT INTO tb_locacao_longo_periodo(id, porcentagem_desconto) VALUES(3, 50.0);
 
+
