@@ -1,10 +1,10 @@
 CREATE TABLE tb_categoria(
-	id INT PRIMARY KEY,
-	descricao VARCHAR(30)
+	id SERIAL PRIMARY KEY,
+	descricao VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE tb_atividade(
-	id INT PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	nome VARCHAR(20) NOT NULL,
 	descricao VARCHAR(30),
 	preco FLOAT,
@@ -13,7 +13,7 @@ CREATE TABLE tb_atividade(
 );
 
 CREATE TABLE tb_bloco(
-	id INT PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	inicio TIMESTAMP,
 	fim TIMESTAMP,
 	atividade_id INT NOT NULL,
@@ -21,14 +21,14 @@ CREATE TABLE tb_bloco(
 );
 
 CREATE TABLE tb_participante(
-	id INT PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	nome VARCHAR(20) NOT NULL,
-	email VARCHAR(30) NOT NULL
+	email VARCHAR(30) UNIQUE NOT NULL
 );
 
 CREATE TABLE tb_participacao(
-	participante_id INT NOT NULL,
-	atividade_id INT NOT NULL,
+	participante_id INT PRIMARY KEY,
+	atividade_id INT PRIMARY KEY,
 	FOREIGN KEY(participante_id) REFERENCES tb_participante(id),
 	FOREIGN KEY(atividade_id) REFERENCES tb_atividade(id)
 );
